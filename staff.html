@@ -53,24 +53,24 @@
 <div class="content-wrapper">
     <div class="staff-grid">
         <!-- Profs -->
-        <div class="staff-member" onclick="showDetails('Amy Greenwald', 'Professor', 'She/Her', 'Providence, RI', 'Amy bio', 'images/steves/alex.webp')">
+        <div class="staff-member" onclick="showDetails('Amy Greenwald', 'Professor', 'She/Her', 'Providence, RI', 'Amy bio', 'amy@brown.edu', 'images/steves/alex.webp')">
             <img src="images/steves/alex.webp" alt="Amy Greenwald">
             <h3>Amy Greenwald (Prof)</h3>
         </div>
-        <div class="staff-member" onclick="showDetails('Eric Ewing', 'Professor', 'He/Him', 'Boston, MA', 'Eric bio', 'images/steves/steve.webp')">
+        <div class="staff-member" onclick="showDetails('Eric Ewing', 'Professor', 'He/Him', 'Boston, MA', 'Eric bio', 'eric_ewing@brown.edu', 'images/steves/steve.webp')">
             <img src="images/steves/steve.webp" alt="Eric Ewing">
             <h3>Eric Ewing (Prof)</h3>
         </div>
         <!-- HTAs -->
-        <div class="staff-member" onclick="showDetails('Grant Landon', 'HTA', 'He/Him', '_, MA', 'grant bio', 'images/steves/alex.webp')">
+        <div class="staff-member" onclick="showDetails('Grant Landon', 'HTA', 'He/Him', '_, MA', 'grant bio', 'grant_landon@brown.edu', 'images/steves/alex.webp')">
             <img src="images/steves/developer_steve.webp" alt="Amy Greenwald">
             <h3>Grant Landon (HTA)</h3>
         </div>
-        <div class="staff-member" onclick="showDetails('Isha Ponugoti', 'HTA', 'She/Her', 'Carmel, IN', 'isha bio', 'images/steves/steve.webp')">
+        <div class="staff-member" onclick="showDetails('Isha Ponugoti', 'HTA', 'She/Her', 'Carmel, IN', 'isha bio', 'isha_ponugoti@brown.edu', 'images/headshots/isha.jpeg')">
             <img src="images/steves/makena.webp" alt="Isha Ponugoti">
             <h3>Isha Ponugoti (HTA)</h3>
         </div>
-        <div class="staff-member" onclick="showDetails('Jennifer Chen', 'HTA', 'She/Her', '_, NJ', 'jen bio', 'images/steves/steve.webp')">
+        <div class="staff-member" onclick="showDetails('Jennifer Chen', 'HTA', 'She/Her', '_, NJ', 'jen bio', 'jennifer_a_chen@brown.edu', 'images/steves/steve.webp')">
             <img src="images/steves/efe.webp" alt="Jennifer Chen">
             <h3>Jennifer Chen (HTA)</h3>
         </div>
@@ -86,7 +86,8 @@
         <p id="staff-role">Role: </p>
         <p id="staff-pronouns">Pronouns: </p>
         <p id="staff-hometown">Hometown: </p>
-        <p id="staff-bio">Bio: </p>
+        <p id="staff-email">Email: </p>
+        <p id="staff-bio"></p>
     </div>
 </div>
 
@@ -105,11 +106,12 @@
   
   <!-- My external JavaScript File -->
   <script>
-    function showDetails(name, role, pronouns, hometown, bio, headshot) {
+    function showDetails(name, role, pronouns, hometown, bio, email, headshot) {
         document.getElementById('staff-name').innerText = name;
         document.getElementById('staff-role').innerText = `Role: ${role}`;
         document.getElementById('staff-pronouns').innerText = `Pronouns: ${pronouns}`;
         document.getElementById('staff-hometown').innerText = `Hometown: ${hometown}`;
+        document.getElementById('staff-email').innerText = `Email: ${email}`;
         document.getElementById('staff-bio').innerText = `Bio: ${bio}`;
 
         // Update headshot image

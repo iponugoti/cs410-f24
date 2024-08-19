@@ -30,6 +30,7 @@ body {
   color: white;
   background-image: url('images/grass-block-texture.jpg');
   background-size: cover;
+  text-align: center;
   /* font-size: larger; */
 }
 
@@ -46,7 +47,7 @@ body {
   z-index: 1; /* Ensure the overlay is above the background image */
 }
 
-.container.text-center {
+.container.home-textbox {
   position: relative;
   z-index: 2; /* Ensures the text is on top of the overlay */
   background-color: rgba(0, 0, 0, 0.75); 
@@ -56,11 +57,27 @@ body {
   z-index: 3;
 }
 
+.home-textbox {
+  border: 4px solid #3D3D3D; /* Dark grey border */
+  box-shadow: 0px 0px 10px #000; /* Darker shadow for depth */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+}
+
 @media screen and (max-width: 768px) {
-  .container.text-center {
+  .container.home-textbox {
     max-width: 100%;
   }
 
+}
+
+/* general components */
+.container.text-center {
+  position: relative;
+  z-index: 2; /* Ensures the text is on top of the overlay */
+  background-color: rgba(0, 0, 0, 0.75); 
+  color: white;
+  border-radius: 10px;
+  z-index: 3;
 }
 
 .text-center {
@@ -94,26 +111,7 @@ margin-top: auto;
 border-top: 1px solid white; 
 }
 
-.email-link {
-color: white;
-}
-.email-link:hover {
-color: white;
-text-decoration: underline;
-}
-
-/* About Page */
-.about-hero{
-  display: block;
-  text-align: center;
-}
-
-.about-hero img{
-  max-height: 450px;
-  width: 100%;
-}
-
-/* new staff */
+/* staff page */
 .staff-page {
   height: 100vh;
   display: flex;
@@ -158,6 +156,7 @@ text-decoration: underline;
   height: auto;
   display: block;
   margin: 0 auto 10px auto;
+  align-items: center;
 }
 
 .staff-member h3 {
@@ -182,6 +181,8 @@ text-decoration: underline;
 
 .details img {
   width: 150px;
+  align-items: center;
+  align-self: center;
   height: auto;
   border-radius: 50%;
   margin-bottom: 20px;
