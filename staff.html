@@ -53,7 +53,7 @@
 <div class="content-wrapper">
     <div class="staff-grid">
         <!-- Profs -->
-        <div class="staff-member" onclick="showDetails('Amy Greenwald', 'Professor', 'She/Her', 'Providence, RI', 'Amy bio', 'amy@brown.edu', 'images/steves/alex.webp')">
+        <div class="staff-member" onclick="showDetails('Amy Greenwald', 'Professor', 'She/Her', 'Providence, RI', 'Amy bio', 'amy', 'images/steves/alex.webp')">
             <img src="images/steves/alex.webp" alt="Amy Greenwald">
             <h3>Amy Greenwald (Prof)</h3>
         </div>
@@ -66,7 +66,7 @@
             <img src="images/steves/developer_steve.webp" alt="Amy Greenwald">
             <h3>Grant Landon (HTA)</h3>
         </div>
-        <div class="staff-member" onclick="showDetails('Isha Ponugoti', 'HTA', 'She/Her', 'Carmel, IN', 'isha bio', 'isha_ponugoti@brown.edu', 'images/headshots/isha.jpeg')">
+        <div class="staff-member" onclick="showDetails('Isha Ponugoti', 'HTA', 'She/Her', 'Carmel, IN', 'isha bio', 'iponugot', 'images/items/isha.webp', 'images/headshots/isha.jpeg')">
             <img src="images/steves/efe.webp" alt="Isha Ponugoti">
             <h3>Isha Ponugoti (HTA)</h3>
         </div>
@@ -87,7 +87,8 @@
         <p id="staff-role">Role: </p>
         <p id="staff-pronouns">Pronouns: </p>
         <p id="staff-hometown">Hometown: </p>
-        <p id="staff-email">Email: </p>
+        <p> Favorite Minecraft Item: <img id="staff-item" src="" alt="Staff Minecraft Item" style="display: none; width: 45px; "></p>
+        <p id="staff-login">CS Login: </p>
         <p id="staff-bio"></p>
     </div>
 </div>
@@ -107,18 +108,23 @@
   
   <!-- My external JavaScript File -->
   <script>
-    function showDetails(name, role, pronouns, hometown, bio, email, headshot) {
+    function showDetails(name, role, pronouns, hometown, bio, login, item, headshot) {
         document.getElementById('staff-name').innerText = name;
         document.getElementById('staff-role').innerText = `Role: ${role}`;
         document.getElementById('staff-pronouns').innerText = `Pronouns: ${pronouns}`;
         document.getElementById('staff-hometown').innerText = `Hometown: ${hometown}`;
-        document.getElementById('staff-email').innerText = `Email: ${email}`;
+        document.getElementById('staff-login').innerText = `CS login: ${login}`;
         document.getElementById('staff-bio').innerText = `Bio: ${bio}`;
 
         // Update headshot image
         const headshotImg = document.getElementById('staff-headshot');
         headshotImg.src = headshot;
         headshotImg.style.display = 'block';
+
+        // Update minecraft item image
+        const minecraftItem = document.getElementById('staff-item');
+        minecraftItem.src = item;
+        minecraftItem.style.display = 'inline-block';
     }
     
   </script>
